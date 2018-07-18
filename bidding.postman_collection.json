@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "6008056f-a1bb-4333-8311-5ed7f1f23b11",
+		"name": "bidding",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{Server}}/accounts/{{account_id}/train",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{Server}}/accounts/{{account_id}}/train",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"accounts",
+						"{{account_id}}",
+						"train"
+					]
+				},
+				"description": "Send a request to start training for account_id"
+			},
+			"response": [
+				{
+					"id": "a45d8dbd-43a3-414a-bffa-a4faa73fbb09",
+					"name": "training already started",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{server}}/accounts/{{account_id}}/train",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"accounts",
+								"{{account_id}}",
+								"train"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"id\": \"{{account_id}}\",\n    \t\"is_training\": true\n    },\n    \"message\": \"Training is already running\"\n}"
+				},
+				{
+					"id": "658202a5-f8dd-43e6-9a72-8ab71959fd92",
+					"name": "train succesfull result",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{server}}/accounts/{{account_id}}/train",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"accounts",
+								"{{account_id}}",
+								"train"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"id\": \"{{account_id}}\",\n    \t\"is_training\": true\n    },\n    \"message\": \"Started training succesfully\"\n}"
+				},
+				{
+					"id": "7e4058bd-96a0-405e-862f-7275570440c3",
+					"name": "train failure because of invalid account_id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{server}}/accounts/{{account_id}}/train",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"accounts",
+								"{{account_id}}",
+								"train"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"error\": \"Account_id not valid\"\n    },\n    \"message\": \"There was problem, Couldn't start training\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{Server}}/accounts/{{account_id}/generate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{Server}}/accounts/{{account_id}}/train",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"accounts",
+						"{{account_id}}",
+						"train"
+					]
+				},
+				"description": "Send a request to start generating bids for account_id"
+			},
+			"response": [
+				{
+					"id": "6d4559f4-85c6-45a6-b63c-5054763d857a",
+					"name": "generate bids succesful result",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{server}}/accounts/{{account_id}}/generate",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"accounts",
+								"{{account_id}}",
+								"generate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"id\": \"{{account_id}}\",\n        \"is_generating_bids\": true\n    },\n    \"message\": \"Started generating bids succesfully\"\n}"
+				},
+				{
+					"id": "6e0cc0b6-725a-4ca0-a4f1-d7f212cfc4ae",
+					"name": "generate failure because of invalid account_id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{server}}/accounts/{{account_id}}/generate",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"accounts",
+								"{{account_id}}",
+								"generate"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"error\": \"Account_id not valid\"\n    },\n    \"message\": \"There was problem, Couldn't start generating bids\"\n}"
+				},
+				{
+					"id": "b5e42b3f-9c3c-4562-a572-1ff8c8afb913",
+					"name": "generating bids already started",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{server}}/accounts/{{account_id}}/generate",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"accounts",
+								"{{account_id}}",
+								"generate"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"id\": \"{{account_id}}\",\n    \t\"is_generating_bids\": true\n    },\n    \"message\": \"Generating bids is already running\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{server}}/accounts/{{account_id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{server}}/accounts/{{account_id}}",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"accounts",
+						"{{account_id}}"
+					]
+				},
+				"description": "Get account object"
+			},
+			"response": [
+				{
+					"id": "b27091b4-436c-4834-ab29-9073fdb6ac2f",
+					"name": "Get account object",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{server}}/accounts/{{account_id}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"accounts",
+								"{{account_id}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"id\": \"{{account_id}}\",\n    \"is_training\": true,\n    \"is_generating_bids\": false,\n    \"current_training_start\": \"2012-04-23T18:25:43.511Z\",\n    \"current_generating_start\": null,\n    \"last_successful_training\": \"2011-04-23T18:25:43.511Z\",\n    \"last_successful_generating_bids\": \"2012-02-23T18:25:43.511Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{server}}/accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{server}}/accounts",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"accounts"
+					]
+				},
+				"description": "Get all accounts array"
+			},
+			"response": [
+				{
+					"id": "96fe9f3b-5649-47ac-bb7d-2b63f0a5a0c1",
+					"name": "Accounts object list",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{server}}/accounts",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"123213\",\n        \"is_training\": true,\n        \"is_generating_bids\": false,\n        \"current_training_start\": \"2012-04-23T18:25:43.511Z\",\n        \"current_generating_start\": null,\n        \"last_successful_training\": \"2011-04-23T18:25:43.511Z\",\n        \"last_successful_generating_bids\": \"2012-02-23T18:25:43.511Z\"\n    },\n    {\n        \"id\": \"312321\",\n        \"is_training\": true,\n        \"is_generating_bids\": true,\n        \"current_training_start\": \"2012-04-23T18:25:43.511Z\",\n        \"current_generating_start\": \"2012-04-23T18:25:43.511Z\",\n        \"last_successful_training\": \"2011-04-23T18:25:43.511Z\",\n        \"last_successful_generating_bids\": \"2012-02-23T18:25:43.511Z\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
