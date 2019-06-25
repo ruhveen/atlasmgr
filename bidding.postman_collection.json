@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6008056f-a1bb-4333-8311-5ed7f1f23b11",
+		"_postman_id": "8e481152-8249-4857-a2e4-0a04a36e50b4",
 		"name": "bidding",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -10,7 +10,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{Server}}/accounts/{{account_id}}/train",
 					"host": [
@@ -26,64 +29,15 @@
 			},
 			"response": [
 				{
-					"id": "a45d8dbd-43a3-414a-bffa-a4faa73fbb09",
-					"name": "training already started",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"body": {},
-						"url": {
-							"raw": "{{server}}/accounts/{{account_id}}/train",
-							"host": [
-								"{{server}}"
-							],
-							"path": [
-								"accounts",
-								"{{account_id}}",
-								"train"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "",
-					"header": [],
-					"cookie": [],
-					"body": "{\n    \"result\": {\n        \"id\": \"{{account_id}}\",\n    \t\"is_training\": true\n    },\n    \"message\": \"Training is already running\"\n}"
-				},
-				{
-					"id": "658202a5-f8dd-43e6-9a72-8ab71959fd92",
-					"name": "train succesfull result",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"body": {},
-						"url": {
-							"raw": "{{server}}/accounts/{{account_id}}/train",
-							"host": [
-								"{{server}}"
-							],
-							"path": [
-								"accounts",
-								"{{account_id}}",
-								"train"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [],
-					"cookie": [],
-					"body": "{\n    \"result\": {\n        \"id\": \"{{account_id}}\",\n    \t\"is_training\": true\n    },\n    \"message\": \"Started training succesfully\"\n}"
-				},
-				{
-					"id": "7e4058bd-96a0-405e-862f-7275570440c3",
+					"id": "4c50c95e-d317-42b5-81a7-ff75ae3c2611",
 					"name": "train failure because of invalid account_id",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{server}}/accounts/{{account_id}}/train",
 							"host": [
@@ -102,6 +56,64 @@
 					"header": [],
 					"cookie": [],
 					"body": "{\n    \"result\": {\n        \"error\": \"Account_id not valid\"\n    },\n    \"message\": \"There was problem, Couldn't start training\"\n}"
+				},
+				{
+					"id": "2d3bc61f-b006-4e79-b508-26c8e2cfca28",
+					"name": "training already started",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/accounts/{{account_id}}/train",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"accounts",
+								"{{account_id}}",
+								"train"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"id\": \"{{account_id}}\",\n    \t\"is_training\": true\n    },\n    \"message\": \"Training is already running\"\n}"
+				},
+				{
+					"id": "c1abfb2a-cfce-4060-b6d6-16e14cf03b3e",
+					"name": "train succesfull result",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{server}}/accounts/{{account_id}}/train",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"accounts",
+								"{{account_id}}",
+								"train"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"result\": {\n        \"id\": \"{{account_id}}\",\n    \t\"is_training\": true\n    },\n    \"message\": \"Started training succesfully\"\n}"
 				}
 			]
 		},
@@ -110,7 +122,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{Server}}/accounts/{{account_id}}/train",
 					"host": [
@@ -126,12 +141,15 @@
 			},
 			"response": [
 				{
-					"id": "6d4559f4-85c6-45a6-b63c-5054763d857a",
+					"id": "0b9de9b7-268a-4598-b12a-df0e6bf11950",
 					"name": "generate bids succesful result",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{server}}/accounts/{{account_id}}/generate",
 							"host": [
@@ -152,12 +170,15 @@
 					"body": "{\n    \"result\": {\n        \"id\": \"{{account_id}}\",\n        \"is_generating_bids\": true\n    },\n    \"message\": \"Started generating bids succesfully\"\n}"
 				},
 				{
-					"id": "6e0cc0b6-725a-4ca0-a4f1-d7f212cfc4ae",
+					"id": "42ab4fdd-02e1-4950-9bbc-8ff0ad3d146b",
 					"name": "generate failure because of invalid account_id",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{server}}/accounts/{{account_id}}/generate",
 							"host": [
@@ -178,12 +199,15 @@
 					"body": "{\n    \"result\": {\n        \"error\": \"Account_id not valid\"\n    },\n    \"message\": \"There was problem, Couldn't start generating bids\"\n}"
 				},
 				{
-					"id": "b5e42b3f-9c3c-4562-a572-1ff8c8afb913",
+					"id": "930d5097-b7a2-4b9b-bf9b-9befb4afb183",
 					"name": "generating bids already started",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{server}}/accounts/{{account_id}}/generate",
 							"host": [
@@ -198,7 +222,7 @@
 					},
 					"status": "OK",
 					"code": 200,
-					"_postman_previewlanguage": "",
+					"_postman_previewlanguage": "Text",
 					"header": [],
 					"cookie": [],
 					"body": "{\n    \"result\": {\n        \"id\": \"{{account_id}}\",\n    \t\"is_generating_bids\": true\n    },\n    \"message\": \"Generating bids is already running\"\n}"
@@ -210,7 +234,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{server}}/accounts/{{account_id}}",
 					"host": [
@@ -225,12 +252,15 @@
 			},
 			"response": [
 				{
-					"id": "b27091b4-436c-4834-ab29-9073fdb6ac2f",
+					"id": "fbd2f735-f486-4a15-8624-e5fe42d904b4",
 					"name": "Get account object",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{server}}/accounts/{{account_id}}",
 							"host": [
@@ -247,7 +277,7 @@
 					"_postman_previewlanguage": "json",
 					"header": [],
 					"cookie": [],
-					"body": "{\n    \"id\": \"{{account_id}}\",\n    \"is_training\": true,\n    \"is_generating_bids\": false,\n    \"current_training_start\": \"2012-04-23T18:25:43.511Z\",\n    \"current_generating_start\": null,\n    \"last_successful_training\": \"2011-04-23T18:25:43.511Z\",\n    \"last_successful_generating_bids\": \"2012-02-23T18:25:43.511Z\"\n}"
+					"body": "{\n    \"id\": \"{{account_id}}\",\n    \"is_training\": true,\n    \"is_generating_bids\": false,\n    \"current_training_start\": \"2012-04-23T18:25:43.511Z\",\n    \"current_training_progress_percentage\": 65,\n    \"current_generating_start\": null,\n    \"current_generating_progress_percentage\": null,\n    \"last_successful_training\": \"2011-04-23T18:25:43.511Z\",\n    \"last_successful_generating_bids\": \"2012-02-23T18:25:43.511Z\"\n}"
 				}
 			]
 		},
@@ -256,7 +286,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "{{server}}/accounts",
 					"host": [
@@ -270,12 +303,15 @@
 			},
 			"response": [
 				{
-					"id": "96fe9f3b-5649-47ac-bb7d-2b63f0a5a0c1",
+					"id": "5207e9a7-27a4-496a-8574-f27837b63354",
 					"name": "Accounts object list",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "{{server}}/accounts",
 							"host": [
@@ -291,7 +327,7 @@
 					"_postman_previewlanguage": "json",
 					"header": [],
 					"cookie": [],
-					"body": "[\n    {\n        \"id\": \"123213\",\n        \"is_training\": true,\n        \"is_generating_bids\": false,\n        \"current_training_start\": \"2012-04-23T18:25:43.511Z\",\n        \"current_generating_start\": null,\n        \"last_successful_training\": \"2011-04-23T18:25:43.511Z\",\n        \"last_successful_generating_bids\": \"2012-02-23T18:25:43.511Z\"\n    },\n    {\n        \"id\": \"312321\",\n        \"is_training\": true,\n        \"is_generating_bids\": true,\n        \"current_training_start\": \"2012-04-23T18:25:43.511Z\",\n        \"current_generating_start\": \"2012-04-23T18:25:43.511Z\",\n        \"last_successful_training\": \"2011-04-23T18:25:43.511Z\",\n        \"last_successful_generating_bids\": \"2012-02-23T18:25:43.511Z\"\n    }\n]"
+					"body": "[\n    {\n        \"id\": \"123213\",\n        \"is_training\": true,\n        \"is_generating_bids\": false,\n        \"current_training_start\": \"2012-04-23T18:25:43.511Z\",\n\t    \"current_training_progress_percentage\": 65,\n\t    \"current_generating_start\": null,\n\t    \"current_generating_progress_percentage\": null,\n        \"last_successful_training\": \"2011-04-23T18:25:43.511Z\",\n        \"last_successful_generating_bids\": \"2012-02-23T18:25:43.511Z\"\n    },\n    {\n        \"id\": \"312321\",\n        \"is_training\": true,\n        \"is_generating_bids\": true,\n        \"current_training_start\": \"2012-04-23T18:25:43.511Z\",\t    \n        \"current_training_progress_percentage\": 25,\n\t    \"current_generating_start\": \"2012-04-23T18:25:43.511Z\",\n\t    \"current_generating_progress_percentage\": 40,\n        \"last_successful_training\": \"2011-04-23T18:25:43.511Z\",\n        \"last_successful_generating_bids\": \"2012-02-23T18:25:43.511Z\"\n    }\n]"
 				}
 			]
 		}
